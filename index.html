@@ -15,7 +15,7 @@ document.write(utid);
 _cc.push(['ci', {'sid': 'frankie-test', 'tid': utid}]);
 _cc.push(['st', 1000]);
 _cc.push(['cf', 507899]);
-_cc.push(['browser-binding-id', getQueryVariable(v)]);
+_cc.push(['browser-binding-id', getQueryVariable('v')]);
 _cc.push(['run', ('https:' == document.location.protocol ? 'https://' : 'http://') + "staging.cdn-net.com"]);
 (function() {
     var c = document.createElement('script'); c.type = 'text/javascript'; c.async = true;
