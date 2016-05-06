@@ -6,7 +6,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
     <meta contents="width=device-width, initial-scale=1.0" name="viewport">
-    <script type="text/javascript">var _cc = _cc || [];
+
+<script type="text/javascript">
+    var _cc = _cc || [];
+    var ustr = Math.random().toString();
+	var udat = new Date();
+	var utid = ustr.substr(2,5) + udat.getTime() + ustr.substr(7,3);
 _cc.push(['ci', {'sid': 'frankie-test'}]);
 _cc.push(['st', 1000]);
 _cc.push(['cf', 1032187]); 
@@ -16,13 +21,23 @@ _cc.push(['run', ('https:' == document.location.protocol ? 'https://' : 'http://
     c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "staging.cdn-net.com" + '/cc.js?ts=' + (new Date()).getTime();
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(c, s);
 })();
+
 function onSubmit(e) {
   e.preventDefault ? e.preventDefault() : e.returnValue = false;
-  _cc.push(['ci', {'tid': '12345-6789-10'}]);
+  _cc.push(['ci', {'tid': utid}]);
   _cc.push(['csd', function() {
-    document.getElementById("loginform").submit();
+    	showThankYou();
   }]);
-}</script>
+}
+
+function showThankYou(){
+    $('#loginform').hide();
+    $('#thankYou').show();
+       
+}
+
+
+</script>
   </head>
   <body>
     <div class="container">
@@ -40,8 +55,14 @@ function onSubmit(e) {
         </fieldset>
       </form>
       <noscript>
-        <img src="//staging.cdn-net.com/s1.gif?sid=sample-site&amp;tid=12345-6789-10">
+        <img src="//staging.cdn-net.com/s1.gif?sid=sample-site&tid=utid">
       </noscript>
+      
+      
+    	<div id="thankYou" style="display:none;">
+        	<p>Collection completed</p>
+    	</div>
+
     </div>
   </body>
 </html>
