@@ -5,15 +5,19 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
     <meta contents="width=device-width, initial-scale=1.0" name="viewport">
+ 
 <script type="text/javascript"> 
 var _cc = _cc || [];
-_cc.push(['ci', { 'sid': 'frankie-test', 'tid': '12345-test }]);
-_cc.push(['run', ('https:' == document.location.protocol ? 'https://' : 'http://') + "www.cdn-net.com"]);
+	_cc.push(['ci', { 'sid': 'frankie-test', 'tid': '12345-test' }]);
+	_cc.push(['run', ('https:' == document.location.protocol ? 'https://' : 'http://') + "staging.cdn-net.com"]);
 (function () {
-var c = document.createElement('script'); c.type = 'text/javascript'; c.async = true;
-c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "www.cdn-net.com" + '/cc.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(c, s);
+	var c = document.createElement('script'); c.type = 'text/javascript'; c.async = true;
+	c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "staging.cdn-net.com" + '/cc.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(c, s);
 })();
 </script>
-<noscript><img src="https://www.cdn-net.com/s1.gif?sid=frankie-test&tid=12345-test"/></noscript> 
+
+<noscript><img src="https://staging.cdn-net.com/s1.gif?sid=frankie-test&tid=12345-test"/></noscript> 
+
+</head>
 </html>
